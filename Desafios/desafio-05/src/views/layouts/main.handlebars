@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="icon" href="data:;base64,=">
+    <link rel="stylesheet" href="css/{{css}}">
+</head>
+
+<body>
+    <!--El símbolo ">" significa que el nav y footer están en partials. Partials es palabra reservada-->
+    <!--En body entra todo lo que esté en la carpeta views pero no en una subcarpeta, así se configuró. En mi caso home y realTimeProducts-->
+    {{>nav}}
+    {{{body}}} <!--El body es home o realTimeProducts, dependiendo de la ruta ingresada-->
+    {{>footer}}
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="js/{{js}}"></script>
+</body>
+
+</html>
